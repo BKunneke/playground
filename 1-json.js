@@ -1,5 +1,4 @@
 // Open a json document, change some data, write the update back to the file.
-// New comment
 
 const fs = require('fs')
 const fileName = '1-json.json'
