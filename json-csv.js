@@ -1,5 +1,6 @@
 // npm install - g json2csv
 
+const fs = require('fs')
 const {
     Parser
 } = require('json2csv');
@@ -19,6 +20,8 @@ try {
     const parser = new Parser();
     const csv = parser.parse(jsonArray);
     console.log(csv);
+    fs.writeFileSync('results.csv', csv)
 } catch (err) {
     console.error(err);
 }
+
